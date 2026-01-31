@@ -1,14 +1,14 @@
 async function refreshData() {
-    const res = await fetch('/api/prices');
+    const res = await fetch("/api/prices");
     const data = await res.json();
 
-    document.getElementById('btc-price').innerText =
+    document.getElementById("bitcoin-price").innerText =
         `$${data.bitcoin.toLocaleString()}`;
-    document.getElementById('eth-price').innerText =
+    document.getElementById("ethereum-price").innerText =
         `$${data.ethereum.toLocaleString()}`;
 
-    renderChart('bitcoin', 'btc-chart');
-    renderChart('ethereum', 'eth-chart');
+    renderChart("bitcoin", "bitcoin-chart");
+    renderChart("ethereum", "ethereum-chart");
 }
 
 async function renderChart(coin, elementId) {
@@ -17,19 +17,26 @@ async function renderChart(coin, elementId) {
 
     Plotly.newPlot(
         elementId,
-        data,
+        [{
+            x: data.map(d => d.date),
+            y: data.map(d => d.price),
+            type: "scatter",
+            mode: "lines",
+            line: { color: "#00ff88" }
+        }],
         {
-            margin: { t: 10, b: 30 },
-            paper_bgcolor: 'rgba(0,0,0,0)',
-            plot_bgcolor: 'rgba(0,0,0,0)'
+            margin: { t: 20 },
+            paper_bgcolor: "black",
+            plot_bgcolor: "black",
+            font: { color: "#00ff88" }
         },
         { displayModeBar: false }
     );
 }
 
-document.querySelector('.btn-primary').onclick = refreshData;
-document.querySelector('.btn-secondary').onclick = () => {
-    window.location.href = '/api/download-csv';
+document.getElementById("refresh-btn").onclick = refreshData;
+document.getElementById("csv-btn").onclick = () => {
+    window.location.href = "/api/download-csv";
 };
 
 refreshData();
