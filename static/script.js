@@ -35,7 +35,7 @@ async function renderChart(coin, elementId) {
             xaxis: { title: 'Date' },
             yaxis: { title: 'Coin Price (USD)' }
         },
-        { displayModeBar: true }
+        { displayModeBar: false }
     );
 }
 
