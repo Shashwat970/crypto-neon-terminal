@@ -25,13 +25,15 @@ async function renderChart(coin, elementId) {
             line: { color: "#00ff88" }
         }],
         {
-            margin: { t: 50 },
+            margin: { t: 20 },
             paper_bgcolor: "black",
             plot_bgcolor: "black",
             font: { color: "#00ff88" },
-            title: 'Scatter Line Chart for ' + coin,
-            xaxis: { title: 'Date' },
-            yaxis: { title: 'Coin Price (USD)' }
+            layout: {
+                title: 'Scatter Line Chart for ' + coin,
+                xaxis: { title: 'Date' },
+                yaxis: { title: 'Coin Price (USD)' }
+            }
         },
         { displayModeBar: false }
     );
