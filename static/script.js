@@ -29,11 +29,9 @@ async function renderChart(coin, elementId) {
             paper_bgcolor: "black",
             plot_bgcolor: "black",
             font: { color: "#00ff88" },
-            layout: {
-                title: 'Scatter Line Chart for ' + coin,
-                xaxis: { title: 'Date' },
-                yaxis: { title: 'Coin Price (USD)' }
-            }
+            title: 'Scatter Line Chart for ' + coin,
+            xaxis: { title: 'Date' },
+            yaxis: { title: 'Coin Price (USD)' }
         },
         { displayModeBar: false }
     );
