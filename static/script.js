@@ -25,7 +25,7 @@ async function renderChart(coin, elementId) {
             line: { color: "#00ff88" }
         }],
         {
-            margin: { t: 20 },
+            margin: { t: 50 },
             paper_bgcolor: "black",
             plot_bgcolor: "black",
             font: { color: "#00ff88" },
