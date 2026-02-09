@@ -20,12 +20,6 @@ body {
 }
 
 /* Header */
-.main-header {
-    position: sticky;
-    top: 0;
-    text-align: center;
-    margin-bottom: 30px;
-}
 
 .main-header h1 {
     color: var(--neon-green);
