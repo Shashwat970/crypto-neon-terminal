@@ -75,7 +75,7 @@ body {
 
 #bitcoin-chart,
 #ethereum-chart {
-    position: relative;
+    position: middle;
     width: 100%;
     height: 420px;
 
@@ -108,7 +108,7 @@ body {
 #bitcoin-chart::after,
 #ethereum-chart::after {
     content: "";
-    position: absolute;
+    position: middle;
     inset: 0;
 
     background: linear-gradient(120deg,
