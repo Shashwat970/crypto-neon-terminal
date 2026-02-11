@@ -28,6 +28,13 @@ body {
     text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
 }
 
+.main-header p {
+    color: var(--text-gray);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
 /* Stats Bar */
 .stats-row {
     display: flex;
@@ -60,7 +67,10 @@ body {
     display: block;
 }
 
-/*chARTS*/
+/* ===============================
+   CRYPTO CHART CONTAINERS
+   =============================== */
+
 .chart-container {
     height: 120px;
     width: 100%;
@@ -68,10 +78,6 @@ body {
     background: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
-
-/* ===============================
-   CRYPTO CHART CONTAINERS
-   =============================== */
 
 #bitcoin-chart,
 #ethereum-chart {
